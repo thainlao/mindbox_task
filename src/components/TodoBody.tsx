@@ -58,7 +58,7 @@ const TodoBody: React.FC = () => {
   return (
     <div className='todo_container'>
 
-      <p className='todotext'>todos</p>
+      <p data-testid='todoText' className='todotext'>todos</p>
 
       <div className='todo_box'>
 
@@ -73,13 +73,14 @@ const TodoBody: React.FC = () => {
           <button className='add_button' onClick={handleAddTask}>Добавить</button>
         </div>
 
-        <div className='todoitem_container'>
+        <div className='todoitem_container' data-testid='todo-item-container'>
         {filteredTodoList.map((task, index) => (
-          <li key={index}>
+          <li key={index} data-testid='добавленная задача'>
             <div className='todoitem'>
             <input
                 className={`checkbox ${task.completed ? 'checked' : ''}`}
                 type='checkbox'
+                data-testid='checkboxid'
                 checked={task.completed}
                 onChange={() => handleToggleTask(index)}
               />

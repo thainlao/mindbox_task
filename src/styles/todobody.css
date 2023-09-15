@@ -19,7 +19,14 @@
     cursor: pointer;
     background-color: transparent;
     transition: all 0.2s ease-in;
+    font-size: 17px;
   }
+
+  @media (max-width: 767px) {
+    .filter-button{
+        font-size: 10px;
+    }
+}
 
   .task-count {
     color: grey;
@@ -52,6 +59,13 @@
     0 0 0 2px grey; 
     box-shadow: 0px 7px rgb(242, 241, 241);
   }
+
+  @media (max-width: 767px) {
+    .todo_box{
+        width: 300px;
+        font-size: 10px;
+    }
+}
   
   .inputbox {
     display: flex;
@@ -72,6 +86,12 @@
     padding: 6px;
     font-size: 16px;
   }
+
+  @media (max-width: 767px) {
+    .input{
+        font-size: 10px;
+    }
+}
 
   .todolast {
     display: flex;
@@ -100,7 +120,14 @@
     color: grey;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 17px;
   }
+
+  @media (max-width: 767px) {
+    .clear-completed-button{
+        font-size: 10px;
+    }
+}
 
   .clear-completed-button:hover {
     border-bottom: 1px solid grey;
